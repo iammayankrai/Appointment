@@ -347,22 +347,22 @@ def display_yearly_insights():
             
             st.markdown("</div>", unsafe_allow_html=True)
     
-    # Sales Manager Performance
-    st.markdown("#### 👥 Total Appointments by Sales Manager")
-    manager_df = pd.DataFrame(yearly_total_appointments)
-    st.dataframe(manager_df, use_container_width=True)
+    # # Sales Manager Performance
+    # st.markdown("#### 👥 Total Appointments by Sales Manager")
+    # manager_df = pd.DataFrame(yearly_total_appointments)
+    # st.dataframe(manager_df, use_container_width=True)
     
-    # Visual representation
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        top_performer = max(yearly_total_appointments, key=lambda x: x['Total Appointments'])
-        st.metric("Top Performer", f"{top_performer['Sales Manager']} ({top_performer['Total Appointments']})")
-    with col2:
-        avg_appointments = sum(item['Total Appointments'] for item in yearly_total_appointments) / len(yearly_total_appointments)
-        st.metric("Average Appointments", f"{avg_appointments:.1f}")
-    with col3:
-        total_appts = sum(item['Total Appointments'] for item in yearly_total_appointments)
-        st.metric("Total Appointments", total_appts)
+    # # Visual representation
+    # col1, col2, col3 = st.columns(3)
+    # with col1:
+    #     top_performer = max(yearly_total_appointments, key=lambda x: x['Total Appointments'])
+    #     st.metric("Top Performer", f"{top_performer['Sales Manager']} ({top_performer['Total Appointments']})")
+    # with col2:
+    #     avg_appointments = sum(item['Total Appointments'] for item in yearly_total_appointments) / len(yearly_total_appointments)
+    #     st.metric("Average Appointments", f"{avg_appointments:.1f}")
+    # with col3:
+    #     total_appts = sum(item['Total Appointments'] for item in yearly_total_appointments)
+    #     st.metric("Total Appointments", total_appts)
 
 def display_3month_insights():
     st.markdown("<h2 class='sub-header'>Last 3 Months Insights (from 18 June 2025)</h2>", unsafe_allow_html=True)
@@ -396,19 +396,19 @@ def display_3month_insights():
             st.markdown(f"<div class='bullet-point'>• {note}</div>", unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
     
-    # Sales Manager Performance
-    st.markdown("#### 👥 Sales Manager Performance")
-    manager_df = pd.DataFrame(last_3_months_total)
-    st.dataframe(manager_df, use_container_width=True)
+    # # Sales Manager Performance
+    # st.markdown("#### 👥 Sales Manager Performance")
+    # manager_df = pd.DataFrame(last_3_months_total)
+    # st.dataframe(manager_df, use_container_width=True)
     
-    # Visual metrics
-    col1, col2 = st.columns(2)
-    with col1:
-        top_performer = max(last_3_months_total, key=lambda x: x['Total Appointments'])
-        st.metric("Top Performer", f"{top_performer['Sales Manager']} ({top_performer['Total Appointments']})")
-    with col2:
-        total_appts = sum(item['Total Appointments'] for item in last_3_months_total)
-        st.metric("Total Appointments", total_appts)
+    # # Visual metrics
+    # col1, col2 = st.columns(2)
+    # with col1:
+    #     top_performer = max(last_3_months_total, key=lambda x: x['Total Appointments'])
+    #     st.metric("Top Performer", f"{top_performer['Sales Manager']} ({top_performer['Total Appointments']})")
+    # with col2:
+    #     total_appts = sum(item['Total Appointments'] for item in last_3_months_total)
+    #     st.metric("Total Appointments", total_appts)
 
 def display_last_week_insights():
     st.markdown("<h2 class='sub-header'>Last Week Insights</h2>", unsafe_allow_html=True)
@@ -422,9 +422,9 @@ def display_last_week_insights():
     st.markdown("**Sales Notes:** • –")
     st.markdown("</div>", unsafe_allow_html=True)
     
-    st.markdown("#### 👥 Sales Manager Performance")
-    manager_df = pd.DataFrame(last_week_total)
-    st.dataframe(manager_df, use_container_width=True)
+    # st.markdown("#### 👥 Sales Manager Performance")
+    # manager_df = pd.DataFrame(last_week_total)
+    # st.dataframe(manager_df, use_container_width=True)
 
 # =========================
 # Display based on selection
